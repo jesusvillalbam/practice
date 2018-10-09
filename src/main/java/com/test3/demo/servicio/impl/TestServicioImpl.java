@@ -10,7 +10,7 @@ public class TestServicioImpl implements TestServicio{
 	private int suma = 0;
 	
 	@Override
-	public int sumar() {
+	public Integer sumar() {
 		suma = 1+2;
 		return suma;
 	}
