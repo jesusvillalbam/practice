@@ -28,6 +28,7 @@ public class EjemploTest {
 	public void testVerificarSuma(){
 		when(testServicio.sumar()).thenReturn(8);
 		assertEquals(8, testController.Hola());
+		System.out.println("aaa");
 	}
 	
 }
