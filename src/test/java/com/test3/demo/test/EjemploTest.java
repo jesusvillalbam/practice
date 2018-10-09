@@ -26,8 +26,8 @@ public class EjemploTest {
 	
 	@Test
 	public void testVerificarSuma(){
-		when(testServicio.sumar()).thenReturn(4);
-		assertEquals(4, testController.Hola());
+		when(testServicio.sumar()).thenReturn(5);
+		assertEquals(5, testController.Hola());
 	}
 	
 }
