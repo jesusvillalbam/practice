@@ -1,6 +1,8 @@
 package com.test3.demo.controlador;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,8 +16,9 @@ public class TestController {
 	TestServicio testServicio;
 	
 	@RequestMapping(path="hola", method= RequestMethod.GET)
-	public int Hola() {
-		return testServicio.sumar();
+	public ResponseEntity<Integer> Hola() {
+		Integer result = testServicio.sumar();
+		return new ResponseEntity<>(result, HttpStatus.OK);
 	}
 
 }
